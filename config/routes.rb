@@ -3,7 +3,7 @@ Enrollmentsapp::Application.routes.draw do
   resources :students
   resources :classes
 
-  root to: "enrollments#index"
+  root :to => 'enrollments#index'
 
 
   # The priority is based upon order of creation:
