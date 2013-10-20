@@ -22,7 +22,7 @@
   </div>
   <div class="field">
     <%= f.label :class %><br />
-    <%= f.collection_select :class_id, class.all, :id, :name %>
+    <%= f.collection_select :class_id, Classes.all, :id, :name %>
     <%= link_to "New class", new_class_path %>
   </div>
   <div class="actions">
