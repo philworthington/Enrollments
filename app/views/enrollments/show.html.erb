@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>enrollment</b>
+  <%= @enrollment.enrollment_date %> - <%= Student.find(@enrollment.student_id).name %> - <%= Class.find(@enrollment.class_id).name %>
+</p>
+
+
+<%= link_to 'Edit', edit_enrollment_path(@enrollment) %> |
+<%= link_to 'Back', enrollments_path %>

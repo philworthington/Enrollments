@@ -1,0 +1,27 @@
+<h1>Enrollments</h1>
+
+<table>
+  <tr>
+    <th>Enrollment Date</th>
+    <th>Student</th>
+    <th>Class</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @enrollments.each do |enrollment| %>
+  <tr>
+    <td><%= enrollment.enrollment_date %>
+    <td><%= Student.find(enrollment.student_id).name %>
+    <td><%= Class.find(enrollment.class_id).name %></td>
+    <td><%= link_to 'Show', enrollment %></td>
+    <td><%= link_to 'Edit', edit_enrollment_path(enrollment) %></td>
+    <td><%= link_to 'Destroy', enrollment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Enrollment', new_enrollment_path %>
