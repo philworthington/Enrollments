@@ -38,4 +38,8 @@ Screenshots of your application below:
 5. Create new Pull Request
 
 
+## License
+
+MIT: http://philworthington.mit-license.org
+
 
